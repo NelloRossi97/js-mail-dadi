@@ -1,0 +1,10 @@
+:root{
+    --eo-primary: #AB05F2;
+    --eo-secondary: #36D99D;
+    --eo-neutral: #F2F2F2;
+    --eo-dark: #262626;
+}
+
+body{
+    background-color: var(--eo-secondary);
+}

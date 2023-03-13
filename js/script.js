@@ -26,6 +26,8 @@ Consigli del giorno:
 const btnEmail = document.getElementById('email');
 const btnDice = document.getElementById('dice');
 const btnSubmit = document.getElementById('submit');
+const btnStartDice = document.getElementById('startDice');
+
 let emailAllowed = [
     'cleliafradella@gmail.com',
     'marcoacciari@gmail.com',
@@ -56,13 +58,16 @@ if(btnSubmit !== null){
 btnSubmit.addEventListener('click', function(){
     emailBox = document.getElementById('emailBox').value;
     emailResult = document.getElementById('emailResult');
+    let result = false;
+    
     for (i = 0; i < emailAllowed.length; i++){
-        if (emailBox === emailAllowed[i]){
-            console.log('accettato');
-            emailResult.innerHTML = `<h2 class="text-success"> L'email è accettata </h2>`
-        } else{
-            emailResult.innerHTML = `<h2 class="text-danger"> L'email non è accettata </h2>`;
-            console.log('non accettato');
+        if (emailBox.toLowerCase() === emailAllowed[i].toLowerCase()){
+            result = true;
         }
+    }
+    if (result){
+        emailResult.innerHTML = `<h2 class="text-success"> L'email è accettata </h2>`;
+    } else{
+        emailResult.innerHTML = `<h2 class="text-danger"> L'email non è accettata </h2>`;
     }
 })

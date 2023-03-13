@@ -6,5 +6,20 @@
 }
 
 body{
+    background-color: var(--eo-dark);
+    color: var(--eo-neutral);
+}
+
+.nr-bg-secondary{
     background-color: var(--eo-secondary);
+}
+.nr-text-primary{
+    color: var(--eo-primary);
+}
+.nr-text-dark{
+    color: var(--eo-dark);
+}
+.card{
+    height: 300px;
+    width: 300px;
 }

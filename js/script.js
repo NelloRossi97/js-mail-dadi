@@ -55,7 +55,8 @@ if(btnSubmit !== null){
 })
 } 
 
-btnSubmit.addEventListener('click', function(){
+if(btnSubmit !== null){
+    btnSubmit.addEventListener('click', function(){
     emailBox = document.getElementById('emailBox').value;
     emailResult = document.getElementById('emailResult');
     let result = false;
@@ -71,3 +72,29 @@ btnSubmit.addEventListener('click', function(){
         emailResult.innerHTML = `<h2 class="text-danger"> L'email non è accettata </h2>`;
     }
 })
+}
+
+
+if(btnStartDice !== null){
+    btnStartDice.addEventListener('click', function(){
+        let userNumber = rndNumber(1,6);
+        let computerNumber = rndNumber(1,6);  
+        const userNumberBox = document.getElementById('userNumber');
+        const computerNumberBox = document.getElementById('computerNumber');
+        const resultDiceBox = document.getElementById('resultDice');
+
+        userNumberBox.innerHTML =`<h3 class="fs-3 nr-text-dark fw-bold">${userNumber}</h3>`;
+        computerNumberBox.innerHTML =`<h3 class="fs-3 nr-text-dark fw-bold">${computerNumber}</h3>`;
+        if (userNumber < computerNumber){
+            resultDiceBox.innerHTML = `<h2 class="text-danger fw-bold"> EEEEEEEHHHH VOLEVI! Hai perso, riprova!`;
+        } else if (userNumber === computerNumber){
+            resultDiceBox.innerHTML = `<h2 class="text-danger fw-bold"> Anche se è pari... IL BANCO VINCE!!!`;
+        } else{
+            resultDiceBox.innerHTML = `<h2 class="text-success fw-bold"> Complimenti! Hai vinto! </h2>`;
+        }
+})
+}
+
+function rndNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}

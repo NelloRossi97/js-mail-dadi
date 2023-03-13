@@ -88,7 +88,7 @@ if(btnStartDice !== null){
         if (userNumber < computerNumber){
             resultDiceBox.innerHTML = `<h2 class="text-danger fw-bold"> EEEEEEEHHHH VOLEVI! Hai perso, riprova!`;
         } else if (userNumber === computerNumber){
-            resultDiceBox.innerHTML = `<h2 class="text-danger fw-bold"> Anche se è pari... IL BANCO VINCE!!!`;
+            resultDiceBox.innerHTML = `<h2 class="text-warning fw-bold"> Anche se è pari... IL BANCO VINCE!!!`;
         } else{
             resultDiceBox.innerHTML = `<h2 class="text-success fw-bold"> Complimenti! Hai vinto! </h2>`;
         }

@@ -35,7 +35,7 @@ let emailAllowed = [
     'bryanlucchetta@gmail',
     'adrianogrimaldi@gmail.com',
     'eugeniafaiola@gmail.com'
-]
+];
 
 if (btnEmail !== null){
     btnEmail.addEventListener('click', function(){

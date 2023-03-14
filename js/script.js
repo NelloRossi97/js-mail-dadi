@@ -37,25 +37,25 @@ let emailAllowed = [
     'eugeniafaiola@gmail.com'
 ];
 
-if (btnEmail !== null){
+if (btnEmail){
     btnEmail.addEventListener('click', function(){
     window.open("email.html");
 })
 }
 
-if (btnDice !== null){
+if (btnDice){
     btnDice.addEventListener('click', function(){
     window.open("dice.html");
 })
 }
 
-if(btnSubmit !== null){
+if(btnSubmit){
     btnSubmit.addEventListener('click', function(reload){
     reload.preventDefault()
 })
 } 
 
-if(btnSubmit !== null){
+if(btnSubmit){
     btnSubmit.addEventListener('click', function(){
     emailBox = document.getElementById('emailBox').value;
     emailResult = document.getElementById('emailResult');
@@ -75,7 +75,7 @@ if(btnSubmit !== null){
 }
 
 
-if(btnStartDice !== null){
+if(btnStartDice){
     btnStartDice.addEventListener('click', function(){
         let userNumber = rndNumber(1,6);
         let computerNumber = rndNumber(1,6);  
